@@ -3,15 +3,15 @@
 // Best: O(n^2)
 // Average: O(n^2)
 
-fn selection<T: Ord>(arr: &mut Vec<T>){
-    let n = arr.len()
+pub fn selection<T: Ord>(arr: &mut Vec<T>){
+    let n = arr.len();
     for i in 0..n{
-        let mut temp = i
+        let mut temp = i;
         for j in i + 1..n{
             if arr[j] < arr[temp]{
-                temp = j
+                temp = j;
             }
         }
-        arr.swap(i, temp)
+        arr.swap(i, temp);
     }
 }
