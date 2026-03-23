@@ -5,7 +5,7 @@ from collections import deque
 # g: adjacency list
 # v: visited list
 
-def dfs(node,n, g):
+def dfs(node, n, g):
     stack = [node]
     visited = [False] * n
     visited[node] = True
